@@ -99,11 +99,9 @@ function readtooevent(e) {
             var rnd = Math.floor(Math.random() * allposts);
             for(let l=0;l<puu.length;l++)puu[l]==rnd&&(rnd=Math.floor(Math.random()*allposts));
             puu.push(rnd);var postorder=e.feed.entry[rnd].link.length-1,urlofppost=e.feed.entry[rnd].link[postorder].href,titleofpost=e.feed.entry[rnd].link[postorder].title,postmh=document.createElement("a");postmh.href=urlofppost,postmh.target="_blank",postmh.innerHTML=titleofpost;var conofposts=document.createElement("div");conofposts.className="urlreadtoo",conofposts.innerHTML=postmh.outerHTML,document.getElementsByClassName("readtoo")[t].appendChild(conofposts);
-      $(document)['ready'](function () {
-        $('#credit')['html']('<a href="https://alfanan-developer-wep.blogspot.com" rel="dofollow" target="_blank">تصميم الفنان ويب </a>');
-        setInterval(function () {
-                if (!$('#credit:visible')['length']) {
-                  window['location']['href'] = 'https://alfanan-developer-wep.blogspot.com';
-                };
-            }, 3000);
-    });
+        }
+    }
+}
+var scriptthm = document.createElement("script");
+scriptthm.src="/feeds/posts/default?alt=json-in-script&max-results=150&callback=readtooevent";
+document.getElementsByClassName("readtoo")[0].appendChild(scriptthm);
