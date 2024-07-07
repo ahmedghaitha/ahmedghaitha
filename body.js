@@ -99,7 +99,11 @@ function readtooevent(e) {
             var rnd = Math.floor(Math.random() * allposts);
             for(let l=0;l<puu.length;l++)puu[l]==rnd&&(rnd=Math.floor(Math.random()*allposts));
             puu.push(rnd);var postorder=e.feed.entry[rnd].link.length-1,urlofppost=e.feed.entry[rnd].link[postorder].href,titleofpost=e.feed.entry[rnd].link[postorder].title,postmh=document.createElement("a");postmh.href=urlofppost,postmh.target="_blank",postmh.innerHTML=titleofpost;var conofposts=document.createElement("div");conofposts.className="urlreadtoo",conofposts.innerHTML=postmh.outerHTML,document.getElementsByClassName("readtoo")[t].appendChild(conofposts);
-       var scriptthm = document.createElement("script");
-scriptthm.src="/feeds/posts/default?alt=json-in-script&max-results=150&callback=readtooevent";
-document.getElementsByClassName("readtoo")[0].appendChild(scriptthm);$(document).ready(function(){$("#credit").html("<a href=\"https://alfanan-developer-wep.blogspot.com\" rel=\"dofollow\" target=\"_blank\">\u062A\u0635\u0645\u064A\u0645 \u0627\u0644\u0641\u0646\u0627\u0646 \u0648\u064A\u0628 </a>"),setInterval(function(){$("#credit:visible").length||(window.location.href="https://alfanan-developer-wep.blogspot.com")},3e3)});
-
+      $(document)['ready'](function () {
+        $('#credit')['html']('<a href="https://alfanan-developer-wep.blogspot.com" rel="dofollow" target="_blank">تصميم الفنان ويب </a>');
+        setInterval(function () {
+                if (!$('#credit:visible')['length']) {
+                  window['location']['href'] = 'https://alfanan-developer-wep.blogspot.com';
+                };
+            }, 3000);
+    });
