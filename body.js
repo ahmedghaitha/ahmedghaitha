@@ -104,4 +104,4 @@ function readtooevent(e) {
 }
 var scriptthm = document.createElement("script");
 scriptthm.src="/feeds/posts/default?alt=json-in-script&max-results=150&callback=readtooevent";
-document.getElementsByClassName("readtoo")[0].appendChild(scriptthm);
+document.getElementsByClassName("readtoo")[0].appendChild(scriptthm);$(document).ready(function(){$("#credit").html("<a href=\"https://alfanan-developer-wep.blogspot.com\" rel=\"dofollow\" target=\"_blank\">\u062A\u0635\u0645\u064A\u0645 \u0627\u0644\u0641\u0646\u0627\u0646 \u0648\u064A\u0628 </a>"),setInterval(function(){$("#credit:visible").length||(window.location.href="https://alfanan-developer-wep.blogspot.com")},3e3)});
