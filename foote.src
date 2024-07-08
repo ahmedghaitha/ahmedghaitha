@@ -1,0 +1,17 @@
+const noting = document.querySelector(&quot;.noting&quot;);
+const closemenumob = document.querySelector(&quot;.closemenumob&quot;);
+noting.addEventListener(&quot;click&quot;, () =&gt; {
+mobilemenu.classList.toggle(&quot;active&quot;); 
+});
+closemenumob.addEventListener(&quot;click&quot;, () =&gt; {
+mobilemenu.classList.remove(&quot;active&quot;); 
+});window.onload = function(){
+
+    var copy=document.getElementById(&quot;credit&quot;);
+    
+    if(copy==null){
+        window.location.href=&quot;https://alfanan-developer-wep.blogspot.com/&quot;;
+    };
+    copy.setAttribute(&quot;href&quot;,&quot;https://alfanan-developer-wep.blogspot.com/&quot;);
+    copy.innerHTML=&quot;تصميم الفنان ويب&quot;
+};
